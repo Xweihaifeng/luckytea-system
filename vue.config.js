@@ -1,19 +1,8 @@
 module.exports = {
-  publicPath: "/",
+  publicPath: "/luckytey/",
   assetsDir: "static",
   productionSourceMap: false,
 
-  // devServer: {
-  //     proxy: {
-  //         '/api':{
-  //             target:'http://jsonplaceholder.typicode.com',
-  //             changeOrigin:true,
-  //             pathRewrite:{
-  //                 '/api':''
-  //             }
-  //         }
-  //     }
-  // }
   devServer: {
     open: true, //---------------------------------------浏览器自动打开页面
     host: "localhost", //--------------------------------如果是真机测试，就使用这个IP
