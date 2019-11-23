@@ -2,6 +2,7 @@ module.exports = {
   publicPath: "/",
   assetsDir: "static",
   productionSourceMap: false,
+
   // devServer: {
   //     proxy: {
   //         '/api':{
@@ -32,6 +33,15 @@ module.exports = {
           "^/api": "/"
         }
       }
+    }
+  },
+
+  pluginOptions: {
+    i18n: {
+      locale: "en",
+      fallbackLocale: "en",
+      localeDir: "locales",
+      enableInSFC: false
     }
   }
 };
