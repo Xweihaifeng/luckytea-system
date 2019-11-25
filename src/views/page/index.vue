@@ -39,7 +39,7 @@
         <article class="index-price-box">
             <section class="index-price-title">
                 <h5>点餐</h5>
-                <img src="../../assets/img/login/clear-def.png" alt="" />
+                <img src="../../assets/img/login/clear-def.png" alt="" @click="clearPriceList" />
             </section>
             <section class="index-price-num">
                 <span>排号：</span>
@@ -94,8 +94,8 @@
                         </li>
                     </ul>
                     <p>
-                        <button>取消</button>
-                        <button>确认修改</button>
+                        <button @click="closeMask">取消</button>
+                        <button @click="submitMonifyPW">确认修改</button>
                     </p>
                 </section>
                 <section class="index-goods-popup" v-if="maskType.isSp">
@@ -220,6 +220,9 @@ export default {
             var self = this;
             var arrX = self.pricelist.map(v=>v.num);
             return self.Sum(arrX);
+        },
+        modifypassword() {
+            return this.$store.state.modifyPW
         }
     },
     methods: {
@@ -238,6 +241,7 @@ export default {
         // 关闭弹窗
         closeMask() {
             var self = this;
+            this.$store.state.modifyPW = false;
             self.maskType.isMask = self.maskType.isPw = self.maskType.isSp = false;
         },
         // 选择商品 - 加入购物车
@@ -294,6 +298,23 @@ export default {
             }
             self.pricelist.push(params);
             self.closeMask();
+        },
+        clearPriceList() {
+            var self = this;
+            self.pricelist = [];
+        },
+        // 提交修改密码
+        submitMonifyPW() {
+            var self = this;
+            self.$message.success("密码修改成功！");
+            self.closeMask();
+        }
+    },
+    watch: {
+        // 显示修改密码弹窗
+        modifypassword(o) {
+            var self = this;
+            self.maskType.isMask = self.maskType.isPw = o;
         }
     }
 };

@@ -75,7 +75,7 @@ export default {
         // 修改密码
         modifyPW() {
             var self = this;
-            this.$emit("activePassword", true);
+            this.$store.state.modifyPW = true;
         }
     },
     mounted() {}
