@@ -1,0 +1,551 @@
+@charset "utf-8";
+
+#Index {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #222;
+}
+
+#Index .index-goods-box {
+    position: relative;
+    width: 1393px;
+    height: 100%;
+    margin-right: 20px;
+    background: #fff;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 3px 0 #eee;
+}
+
+#Index .index-flex {
+    display: flex;
+    align-items: center;
+}
+
+/* 菜单搜索 *********************************************************************/
+#Index .index-search-box {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#Index .index-search-box>aside {
+    position: relative;
+    width: 280px;
+    display: flex;
+    align-items: center;
+}
+
+#Index .index-search-box>aside>input {
+    width: 100%;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    text-indent: 20px;
+    outline: none;
+    border: 1px solid #e6e6e6;
+    border-radius: 26px;
+}
+
+#Index .index-search-box>aside>span {
+    position: absolute;
+    right: 20px;
+    transform: translateY(-50%);
+    top: 56%;
+    cursor: pointer;
+}
+
+#Index .index-search-box>aside>span>img {
+    width: 20px;
+    height: 20px;
+}
+
+/* 商品列表 *********************************************************************/
+#Index .index-goods-list {
+    position: absolute;
+    top: 68px;
+    bottom: 0;
+    padding: 17px 10px 87px;
+    overflow-y: auto;
+}
+
+#Index .index-goods-list>ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Index .index-goods-list>ul>li {
+    width: 323px;
+    height: 336px;
+    margin: 13px 10px;
+    box-shadow: inset 0 0 0 1px #e6e6e6;
+}
+
+#Index .index-goods-img {
+    width: 323px;
+    height: 247px;
+    overflow: hidden;
+}
+
+#Index .index-goods-img img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#Index .index-goods-img:hover img {
+    transform: scale(1.1);
+}
+
+#Index .index-goods-info {
+    padding: 13px 20px 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #222222;
+}
+
+#Index .index-goods-info h6 {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#Index .index-goods-info img {
+    width: 28px;
+    height: 28px;
+}
+
+#Index .index-goods-money {
+    padding: 0 20px;
+    font-size: 18px;
+    color: #ff3428;
+}
+
+/* 点餐 *********************************************************************/
+#Index .index-price-box {
+    position: relative;
+    width: 344px;
+    height: 100%;
+    flex: 1;
+    background: #fff;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 3px 0 #eee;
+}
+
+#Index .index-price-title {
+    position: relative;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    color: #222;
+    font-size: 24px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+#Index .index-price-title>h5 {
+    text-align: center;
+}
+
+#Index .index-price-title>img {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+#Index .index-price-num {
+    position: relative;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: #222;
+    font-size: 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+#Index .index-price-list {
+    position: absolute;
+    width: 100%;
+    top: 130px;
+    bottom: 183px;
+    overflow-y: auto;
+}
+
+#Index .index-price-list>ul {
+    border-bottom: 1px solid #E6E6E6;
+    background-color: #fafafa;
+}
+
+#Index .index-price-info {
+    padding: 13px 20px 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #222;
+}
+
+#Index .index-price-info h6 {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#Index .index-price-info img {
+    width: 28px;
+    height: 28px;
+}
+
+#Index .index-price-unit {
+    width: 61px;
+    height: 28px;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    color: #222;
+}
+
+#Index .index-price-money {
+    padding: 0 20px;
+    font-size: 16px;
+    color: #222;
+}
+
+#Index .index-price-remark {
+    line-height: 22px;
+    padding: 5px 20px 10px;
+    color: #999;
+    font-size: 14px;
+}
+
+#Index .index_price-account {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 183px;
+    box-shadow: -1px 0 8px 1px #eee;
+    border-radius: 4px 4px 0 0;
+}
+
+#Index .index-price-sum {
+    position: relative;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: #222;
+    font-size: 16px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+#Index .index-price-sum>var {
+    font-size: 24px;
+    color: #FF3428;
+}
+
+#Index .index-price-pay {
+    height: 122px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Index .index-price-pay>button {
+    width: 244px;
+    height: 48px;
+    background: #FFC132;
+    color: #222;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+#Index .index-price-pay>button:active {
+    background-color: #F9B10B;
+    cursor: pointer;
+}
+
+/* 弹窗蒙层 *********************************************************************/
+#Index .index-mask-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+#Index .index-mask-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 修改密码 *********************************************************************/
+
+#Index .index-password-popup {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 660px;
+    height: 347px;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#Index .index-password-popup-title {
+    position: relative;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: #FFC132;
+    background-color: #222;
+    font-size: 16px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+#Index .index-password-popup-title>h5 {
+    font-size: 16px;
+}
+
+#Index .index-password-popup-title>span {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-image: url(../../assets/img/login/close-def.png);
+    background-size: 100%;
+}
+
+#Index .index-password-popup-title>span:active {
+    background-image: url(../../assets/img/login/close-down.png);
+}
+
+#Index .index-password-popup>ul {
+    width: 100%;
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 40px;
+}
+
+#Index .index-password-popup>ul>li {
+    display: flex;
+    align-items: center;
+}
+
+#Index .index-password-popup>ul>li>label {
+    width: 80px;
+    padding: 0 12px 0 0;
+    text-align: right;
+}
+
+#Index .index-password-popup>ul>li>input {
+    width: 294px;
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+
+#Index .index-password-popup>p {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #E6E6E6;
+}
+
+#Index .index-password-popup>p>button {
+    width: 164px;
+    height: 48px;
+    border: none;
+    outline: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+#Index .index-password-popup>p>button:active {
+    background-color: #e5e5e5;
+}
+
+#Index .index-password-popup>p>button:last-of-type {
+    margin-left: 30px;
+    background-color: #FFC132;
+}
+
+#Index .index-password-popup>p>button:last-of-type:active {
+    background-color: #F9B10B;
+}
+
+/* 加入购物车 *********************************************************************/
+#Index .index-goods-popup {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 660px;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#Index .index-goods-popup-title {
+    position: relative;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: #FFC132;
+    background-color: #222;
+    font-size: 16px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+#Index .index-goods-popup-title>h5 {
+    font-size: 16px;
+}
+
+#Index .index-goods-popup-title>span {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-image: url(../../assets/img/login/close-def.png);
+    background-size: 100%;
+}
+
+#Index .index-goods-popup-title>span:active {
+    background-image: url(../../assets/img/login/close-down.png);
+}
+
+#Index .index-goods-popup>ul {
+    padding: 20px;
+}
+
+#Index .index-goods-popup>ul h5 {
+    height: 28px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+#Index .index-goods-popup>ul>li {
+    min-height: 28px;
+    line-height: 19px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+}
+
+#Index .index-goods-popup>ul>li>label {
+    height: 28px;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#Index .index-goods-popup>ul>li>div {
+    flex: 1;
+}
+
+#Index .index-goods-popup>ul>li>div>span {
+    width: 101px;
+    height: 28px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    cursor: default;
+}
+
+#Index .index-goods-popup>ul>li>div>var {
+    height: 28px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 15px;
+}
+
+#Index .index-goods-popup>ul>li>div>em {
+    width: 24px;
+    height: 24px;
+    margin: 10px 0 10px 15px;
+}
+
+#Index .index-goods-popup>ul>li>div>em:last-of-type {
+    margin-left: 0;
+}
+
+
+#Index .index-goods-popup>p {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #E6E6E6;
+}
+
+#Index .index-goods-popup>p>button {
+    width: 244px;
+    height: 48px;
+    border: none;
+    outline: none;
+    background-color: #FFC132;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+#Index .index-goods-popup>p>button:active {
+    background-color: #F9B10B;
+}
+
+/* 全局样式 *******************************************************/
+#Index .del {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/img/login/subtract-def.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#Index .Sdel,
+#Index .del:active {
+    background-image: url(../../assets/img/login/subtract-down.png);
+}
+
+#Index .add {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/img/login/add-def.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#Index .Sadd,
+#Index .add:active {
+    background-image: url(../../assets/img/login/add-down.png);
+}
+
+#Index .sel {
+    background-color: #FFC132 !important;
+    color: #222;
+}

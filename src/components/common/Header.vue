@@ -23,7 +23,7 @@
                         <i class="el-icon-caret-bottom"></i>
                     </span>
                     <ul slot="dropdown" class="header-more" v-if="headermore">
-                        <li><img src="../../assets/img/login/password.png" alt="">修改密码</li>
+                        <li @click="modifyPW"><img src="../../assets/img/login/password.png" alt="">修改密码</li>
                         <li @click="loginout" class="loginout"><img src="../../assets/img/login/signout.png" alt="">退出登录</li>
                     </ul>
                 </div>
@@ -71,6 +71,11 @@ export default {
                 else if (element.msRequestFullscreen) element.msRequestFullscreen();
             }
             this.fullscreen = !this.fullscreen;
+        },
+        // 修改密码
+        modifyPW() {
+            var self = this;
+            this.$emit("activePassword", true);
         }
     },
     mounted() {}
