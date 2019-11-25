@@ -1,20 +1,36 @@
 @charset "utf-8";
 ::-webkit-scrollbar { width: 0 !important; }
-html, body { position: fixed; width: 100%; height: 100%; margin: 0; padding: 0; font-size: 14px; }
+html, body { position: fixed; width: 100%; height: 100%; margin: 0; padding: 0; font-size: 16px; }
 h1, h2, h3, h4, h5, h6, p, pre, dd { margin: 0; }
 ul { padding: 0; margin: 0; }
 var { font-style: unset; }
 span, mark, a { display: inline-block; }
 mark { background: none; color: #4466F4; }
+img { border: 0;vertical-align: middle; }
 ul, li { list-style: none; }
 progress { width: 168px; height: 16px; background: rgba(0, 0, 0, .2); }
 progress::-webkit-progress-bar { background-color: transparent; }
 progress::-webkit-progress-value { background-color: rgba(0, 64, 255, 0.7); }
-input.inputTexts{min-width:120px;height:30px;border:1px solid #00466B;border-radius:3px;outline:none;text-indent:5px;background:transparent;color:#afafaf;}
+input.inputTexts{min-width:120px;height:30px;border:1px solid #00466B;border-radius:3px;outline:none;text-indent:5px;background:transparent;color:#222;}
 select {min-width:120px;height:30px;border:1px solid #00466B;border-radius:3px;outline:none;text-indent:5px;cursor:pointer;background:transparent;color:#afafaf;}
 select option { padding: 4px 0; height: 35px; line-height: 35px; }
-
+input[type="password"] { letter-spacing: 5px; /* -webkit-text-stroke: thick; */ }
+input[type="password"]::-webkit-input-placeholder{ -webkit-text-stroke:unset!important; }
+input::-webkit-input-placeholder{ color:#666;font-size:16px;font-weight:unset;-webkit-text-stroke:unset!important; }
+input::-moz-placeholder{ color:#666;font-size:16px;font-weight:unset; }
+input:-moz-placeholder{ color:#666;font-size:16px;font-weight:unset; }
+input:-ms-input-placeholder{ color:#666;font-size:16px;font-weight:unset; }
 #app { width: 100%; height: 100%; }
+
+/* 用户登录样式修改 */
+#Login .username .el-input-group__prepend,#Login .password .el-input-group__prepend {
+    border-radius: 26px 0 0 26px;
+}
+#Login .username .el-input__inner, #Login .password .el-input__inner {
+    border-radius: 0 26px 26px 0!important;
+    height: 48px!important;
+    line-height: 48px!important;
+}
 
 /* 改变原始横向滚动条样式 */
 .scrollX {
@@ -84,10 +100,20 @@ select option { padding: 4px 0; height: 35px; line-height: 35px; }
 }
 
 /* elementUI默认样式初始化 */
+.el-dropdown-menu {
+    padding: 0!important;
+    margin: 15px 0 0!important;
+}
+.el-dropdown-menu .el-dropdown-menu__item {
+    white-space: nowrap;
+}
+.el-dropdown-menu .el-dropdown-menu__item:nth-child(2) {
+    border-top: 1px solid #f5f5f5;
+}
 .el-input__inner{
     background: transparent;
-    border: 1px solid #00787f !important;
-    color: #eee !important;
+    border: 1px solid #f5f5f5 !important;
+    color: #222222 !important;
     padding: 0 30px !important;
     border-radius: 0!important;
 }
@@ -101,12 +127,18 @@ select option { padding: 4px 0; height: 35px; line-height: 35px; }
     padding: 2px 0!important;
 }
 .el-pagination .btn-next, .el-pagination .btn-prev, .el-pagination .el-pager li, .el-pagination .el-dialog {
-    background: rgba(0, 255, 218, 0.2)!important;
-    color: #90c4c7!important;
+    width: 36px;
+    height: 36px!important;
+    line-height: 36px!important;
+    background: #fff!important;
+    color: #333!important;
+    border: 1px solid #e6e6e6!important;
+    border-radius: 1px!important;
 }
 .el-pagination__total {
-    color: #fff; margin: 0 0 0 4px;
+    color: #fff;
+    margin: 0 0 0 4px;
 }
 .el-pagination.is-background .el-pager li:not(.disabled).active {
-    color: #e4ff00!important;
+    background: #ffc231!important;
 }
