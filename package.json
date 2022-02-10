@@ -33,7 +33,7 @@
     "internal-ip": "^4.2.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
-    "node-sass": "^4.9.2",
+    "node-sass": "^7.0.0",
     "prettier": "^1.18.2",
     "qrcode-terminal": "^0.12.0",
     "sass-loader": "^7.0.3",
